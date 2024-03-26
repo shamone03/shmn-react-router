@@ -8,17 +8,18 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
   plugins: [
     react(),
-    dts({
-      include: ['lib'], insertTypesEntry: true, copyDtsFiles: true,
-    })
+    dts({ include: ['lib'] })
   ],
   build: {
     lib: {
       entry: resolve(__dirname, 'lib/main.ts'),
-      formats: ['es']
+      formats: ['es'],
+      fileName: "main"
     },
     rollupOptions: {
       external: ['react', 'react/jsx-runtime'],
-    }
-  }
+    },
+    emptyOutDir: true
+  },
+
 })

@@ -1,10 +1,11 @@
 {
   "name": "shmn-react-router",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "type": "module",
-  "main": "./dist/shmn-react-router.js",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
   "files": [
-    "/dist"
+    "dist/*"
   ],
   "scripts": {
     "dev": "vite",

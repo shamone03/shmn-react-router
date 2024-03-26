@@ -15,9 +15,9 @@ type ActionFunction<T> = (req: FormData) => T
 type LoaderFunction<T> = () => T
 
 type Route = {
-    route: RegExp, 
-    element: JSX.Element, 
-    loader?: LoaderFunction, 
+    route: RegExp,
+    element: JSX.Element,
+    loader?: LoaderFunction,
     action?: ActionFunction
 }
 
