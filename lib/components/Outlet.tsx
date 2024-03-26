@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { LocationDataContext } from "../contexts/LocationDataContext";
-import { LocationContext } from "../contexts/LocationContext";
+import { Location } from "../contexts/LocationContext";
 
-function Outlet() {
+export function Outlet() {
 
     const routes = useContext(LocationDataContext);
-    const { location } = useContext(LocationContext);
+    const { location } = useContext(Location);
     const current = routes.filter(i => i.route.test(location)).map(i => i.element);
     if (current.length === 0) {
         console.warn(`no matching element on route ${location}`);
@@ -20,5 +20,3 @@ function Outlet() {
         </>
     )
 }
-
-export default Outlet;

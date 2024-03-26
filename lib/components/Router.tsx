@@ -1,9 +1,9 @@
 import { useState, useEffect, PropsWithChildren } from "react";
 import { LocationDataContext } from "../contexts/LocationDataContext";
-import { LocationContext } from "../contexts/LocationContext";
-import { NavigationContext } from "../contexts/NavigationContext";
+import { Location } from "../contexts/LocationContext";
+import { Navigation } from "../contexts/NavigationContext";
 
-function Router(props: PropsWithChildren<{ routes: Route[] }>) {
+export function Router(props: PropsWithChildren<{ routes: Route[] }>) {
 
     const [currentLocation, setCurrentLocation] = useState(window.location.pathname);
 
@@ -23,14 +23,12 @@ function Router(props: PropsWithChildren<{ routes: Route[] }>) {
 
     return (
         <LocationDataContext.Provider value={props.routes}>
-            <LocationContext.Provider value={{ location: currentLocation }}>
-                <NavigationContext.Provider value={{ navigate }}>
+            <Location.Provider value={{ location: currentLocation }}>
+                <Navigation.Provider value={{ navigate }}>
                     {props.children}
-                </NavigationContext.Provider>
-            </LocationContext.Provider>
+                </Navigation.Provider>
+            </Location.Provider>
         </LocationDataContext.Provider>
 
     )
 }
-
-export default Router;

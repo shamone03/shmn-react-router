@@ -1,8 +1,8 @@
 import { PropsWithChildren, useContext } from "react";
-import { NavigationContext } from "../contexts/NavigationContext";
+import { Navigation } from "../contexts/NavigationContext";
 
-function ClientLink({ children, to, onClick }: PropsWithChildren<{ to: string, onClick?: React.MouseEventHandler<HTMLAnchorElement> }>) {
-    const { navigate } = useContext(NavigationContext);
+export function ClientLink({ children, to, onClick }: PropsWithChildren<{ to: string, onClick?: React.MouseEventHandler<HTMLAnchorElement> }>) {
+    const { navigate } = useContext(Navigation);
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         e.preventDefault();
         console.log(to);
@@ -13,5 +13,3 @@ function ClientLink({ children, to, onClick }: PropsWithChildren<{ to: string, o
         <a href={to} onClick={onClick ?? handleClick}>{children}</a>
     )
 }
-
-export default ClientLink;
