@@ -1,3 +1,6 @@
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fshamone03%2Fshmn-react-router%2Fmain%2Fpackage.json&query=version&style=for-the-badge&logo=npm&label=latest)
+
+
 # SHMN REACT ROUTER
 
 - basic implementation of a client side router for react
@@ -6,16 +9,21 @@
 - automatically runs appropriate loader function based on the route
 - automatically runs action functions based on the current route
 
-## Future Work
+# Future Work
 
 - form component to automatically run action on form submit
 - error boundary elements
 - support for nested routes
 - run loaders that are independent of each other at the same time, preventing waterfall
 
-## Example Project Showcasing All Features:
+# Installation
+```sh
+npm i shmn-react-router
+```
 
-```ts
+# Example Project Showcasing All Features:
+
+```tsx
 import { Route, Outlet, ClientLink, Router, useAction, useLoaderData, useNavigate } from "shmn-react-router"
 
 // loader

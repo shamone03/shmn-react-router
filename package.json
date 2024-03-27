@@ -1,6 +1,12 @@
 {
   "name": "shmn-react-router",
-  "version": "0.0.8",
+  "version": "0.0.9",
+  "author": {"email": "aryah@dal.ca", "name": "Aryah (shamone)", "url": "https://aryah.dev"},
+  "repository": {"url": "https://github.com/shamone03/shmn-react-router"},
+  "bugs": {"url": "https://github.com/shamone03/shmn-react-router/issues"},
+  "homepage": "https://github.com/shamone03/shmn-react-router/blob/main/README.md",
+  "description": "Basic implementation of a client side router for react with action and loader function!",
+  "keywords": ["router", "react", "client side routing", "route", "routing", "history"],
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
